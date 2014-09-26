@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Channel Convert</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+      body {
+        margin: 0;
+        background-color: #888888;
+      }
+
+      img, canvas {
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="width-wrapper">
+      <p>Test image, to demonstrate the start point. No events bound here.</p>
+      <img src="test.png" style="display:none"/>
+      <p>Canvas with channel convert, responds to events <code>mouseover</code> and <code>mouseout</code></p>
+      <canvas id="channelconvert"></canvas>
+      <p><a href="channelconvert.js">JavaScript magick</a></p>
+    </div>
+    <script src="channelconvert.js"></script>
+  </body>
+</html>
