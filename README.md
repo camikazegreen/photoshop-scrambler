@@ -1,24 +1,37 @@
-## Generator Core [![Build Status](https://travis-ci.org/adobe-photoshop/generator-core.png?branch=master)](https://travis-ci.org/adobe-photoshop/generator-core)
+## Description
 
-Generator is a JavaScript-based extensibility technology which first shipped in Adobe Photoshop CC v14.1. This repository contains Generator Core, a Node.js library that handles communication between Photoshop and Generator Plug-ins.
+This repo includes a basic Photoshop CC 2014 Plugin that will "scramble" an image, and a javascript file to "unscramble" the image in your browser.
 
-### Status
+This will allow you to serve a scrambled image to the browser, and have it appear perfectly when displayed.
 
-Generator Core is under active development. Thorough documentation, example plug-ins, and tutorials are coming soon. In the mean time, please refer to these resources:
+## Generator Plugin - Scrambler
 
-* [Generator Architecture](https://github.com/adobe-photoshop/generator-core/wiki/Generator-Architecture) -- A wiki page that describes the current overall architecture of Generator.
-* [Generator API Changes](https://github.com/adobe-photoshop/generator-core/wiki/API-Changes) -- A wiki page that describes changes and additions to the Generator Core API over time. 
-* [Image Asset Generation Plug-in](https://github.com/adobe-photoshop/generator-assets) -- A Generator Plug-in that helps users export image assets from their Photoshop files.
-* [List of (known) Generator Plug-ins](https://github.com/adobe-photoshop/generator-core/wiki/Generator-Plug-ins)
+This plugin is built directly off of two tutorials offered directly by Adobe, and then adding in about 8 lines of my own code.
 
-### Developing Generator Plug-ins
+Getting a Generator Plugin up and running by Lee Brimelow:
+http://www.leebrimelow.com/introduction-to-photoshop-generator/
 
-* Learn how to [setup the Generator development environment](https://github.com/adobe-photoshop/generator-core/wiki/Generator-Development-Environment-Setup)
-* Script your [first Adobe Generator plugin for Photoshop](http://tomkrcha.com/?p=3896)
-* Experiment with a [sample plug-in](https://github.com/adobe-photoshop/generator-getting-started/)
-* Get your Generator development questions answered at the [Adobe-Generator-Dev Google group](https://groups.google.com/forum/#!forum/adobe-generator-dev)
-* Follow [@AdobeGenerator](https://twitter.com/AdobeGenerator) on Twitter for more updates
-* We :heart: pull requests! If you submit one, please also sign our [Contributor License Agreement](https://secure.echosign.com/public/hostedForm?formid=8IWLQL2I3V7F6R)
+Getting a Bitmap out of a Generator Plugin by Tom Krcha:
+http://tomkrcha.com/?p=3963
+
+### Getting Started
+
+#### Setting up the Plugin in Photoshop
+
+1. Make sure that you are using Adobe Photoshop CC 2014 and you have Node installed.
+2. In Photoshop, go to Photoshop > Preferences > Plug-Ins...
+3. Set Service Name to "Photoshop Server" and Password to "password".
+4. Clone the Git Repo.
+5. Navigate to the generator-plugins directory in your terminal.
+6. Type node app -f test/plugins
+7. Open an image in Photoshop, and go to File > Generate > Scrambler
+8. This will create a new output image called out.png in your generator-plugins/test/plugins/scrambler directory.
+
+#### Using the JavaScript to unscramble in the browser
+
+1. Set up your web server to point to the generator-plugins/scrambler directory. (I'm not sure why, but the canvas transformation won't work if you just open the index.html file in your browser.)
+2. Copy the out.png file from the generator-plugins/test/plugins/scrambler directory to generator-plugins/scrambler.
+3. In your browser, go to the alias that you set up in your web server and click on the image to unscramble it.
 
 ### License
 
