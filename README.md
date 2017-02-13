@@ -9,7 +9,7 @@ This will allow you to serve a scrambled image to the browser, and have it appea
 This plugin is built directly off of two tutorials offered directly by Adobe, and then adding in about 8 lines of my own code.
 
 Getting a Generator Plugin up and running by Lee Brimelow:
-http://www.leebrimelow.com/introduction-to-photoshop-generator/
+https://www.youtube.com/watch?v=lmSKgiY0ZPM
 
 Getting a Bitmap out of a Generator Plugin by Tom Krcha:
 http://tomkrcha.com/?p=3963
